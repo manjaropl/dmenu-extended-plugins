@@ -5,7 +5,7 @@ file_prefs = dmenu_extended.path_prefs + '/internetSearch.json'
 
 class extension(dmenu_extended.dmenu):
 
-    title = 'Internet search: '
+    title = 'Szukaj w Internecie: '
     is_submenu = True
 
 
@@ -20,12 +20,20 @@ class extension(dmenu_extended.dmenu):
                     'url': 'https://www.google.com/search?q='
                 },
                 {
-                    'title': 'Wikipedia',
-                    'url': 'https://en.wikipedia.org/wiki/Special:Search?search='
+                    'title': 'DuckDuckGo',
+                    'url': 'https://duckduckgo.com/?q='
                 },
                 {
-                    'title': 'Google images',
+                    'title': 'Wikipedia PL',
+                    'url': 'https://pl.wikipedia.org/wiki/Special:Search?search='
+                },
+                {
+                    'title': 'Google obrazki',
                     'url': 'https://www.google.com/images?q='
+                },
+                {
+                    'title': 'Arch User Repository (AUR)',
+                    'url': 'https://aur.archlinux.org/packages/?O=0&K='
                 },
                 {
                     'title': 'Github',
@@ -73,11 +81,11 @@ class extension(dmenu_extended.dmenu):
             for provider in self.providers['providers']:
                 items.append(provider['title'])
 
-            item_editPrefs = self.prefs['indicator_edit'] + ' Edit search providers'
+            item_editPrefs = self.prefs['indicator_edit'] + ' Edytuj strony'
 
             items.append(item_editPrefs)
 
-            provider = self.menu(items, prompt='Select provider:')
+            provider = self.menu(items, prompt='Wybierz stronę:')
 
             if provider == item_editPrefs:
                 self.open_file(file_prefs)
@@ -87,7 +95,7 @@ class extension(dmenu_extended.dmenu):
                 if provider not in items:
                     self.conduct_search(provider)
                 else:
-                    search = self.menu('', prompt='Enter search')
+                    search = self.menu('', prompt='Wyszukaj')
                     if search == '':
                         sys.exit()
                     else:

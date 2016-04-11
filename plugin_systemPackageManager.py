@@ -5,7 +5,7 @@ import os
 
 class extension(dmenu_extended.dmenu):
 
-    title = 'System package management'
+    title = 'Zarządzanie oprogramowaniem'
     is_submenu = True
     detected_packageManager = False
 
@@ -62,7 +62,7 @@ class extension(dmenu_extended.dmenu):
             self.build_package_cache()
             packages = self.cache_open(self.cache_packages)
 
-        package = self.menu(packages, prompt="Install:")
+        package = self.menu(packages, prompt="Instaluj:")
 
         if len(package) > 0:
             self.open_terminal(self.command_installPackage + package.split(' ')[0], True)
@@ -248,13 +248,13 @@ class extension(dmenu_extended.dmenu):
         else:
             print('Detected system package manager as ' + str(self.detected_packageManager))
 
-        items = [self.prefs['indicator_submenu'] + ' Install a new package',
-                 self.prefs['indicator_submenu'] + ' Uninstall a package',
-                 self.prefs['indicator_submenu'] + ' Update a package',
-                 'Rebuild the package cache',
-                 'Perform system upgrade']
+        items = [self.prefs['indicator_submenu'] + ' Instaluj pakiet',
+                 self.prefs['indicator_submenu'] + ' Odinstaluj pakiet',
+                 self.prefs['indicator_submenu'] + ' Aktualizuj pakiet',
+                 'Przebuduj cache pakietów',
+                 'Aktualizuj system']
 
-        selectedIndex = self.select(items, prompt='Action:', numeric=True)
+        selectedIndex = self.select(items, prompt='Akcja:', numeric=True)
 
         if selectedIndex != -1:
             if selectedIndex == 0:
