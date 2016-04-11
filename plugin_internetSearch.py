@@ -32,10 +32,6 @@ class extension(dmenu_extended.dmenu):
                     'url': 'https://www.google.com/images?q='
                 },
                 {
-                    'title': 'Arch User Repository (AUR)',
-                    'url': 'https://aur.archlinux.org/packages/?O=0\&K='
-                },
-                {
                     'title': 'Github',
                     'url':  'https://github.com/search?q='
                 }
