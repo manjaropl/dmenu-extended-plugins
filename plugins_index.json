@@ -2,7 +2,7 @@
     "plugin_internetSearch": {
         "url": "https://raw.githubusercontent.com/manjaropl/dmenu-extended-plugins/master/plugin_internetSearch.py",
         "desc": "Wyszukiwanie w Internecie",
-        "sha1sum": "6be72d79ec47a1fe0bd6a3a23add819a3d943338"
+        "sha1sum": "b844d6eb2f9c1fb4aea76a9d592ad2ca62f1025f"
     },
     "plugin_systemPackageManager": {
         "url": "https://raw.githubusercontent.com/manjaropl/dmenu-extended-plugins/master/plugin_systemPackageManager.py",

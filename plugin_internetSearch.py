@@ -33,7 +33,7 @@ class extension(dmenu_extended.dmenu):
                 },
                 {
                     'title': 'Arch User Repository (AUR)',
-                    'url': 'https://aur.archlinux.org/packages/?O=0&K='
+                    'url': 'https://aur.archlinux.org/packages/?O=0\&K='
                 },
                 {
                     'title': 'Github',
